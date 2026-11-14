@@ -1,4 +1,6 @@
 package part09;
+import java.util.Scanner;
+import java.util.Random;
 
 // Part 09 — CHECKPOINT. No video in this part.
 // Reminders: while loops — part 07 · Scanner — part 03 · Random — part 05
@@ -9,5 +11,59 @@ package part09;
 // There is no main method here yet. Typing it is part of the stretch.
 
 public class Stretch {
+    public static void main(String[] args) {
+        int count = 0;
+        int n = 1;
+        while (n < 20) {
+            n = n * 2;
+            count++;
+        }
+        /* MY GUESS
+        they will have as output 32 5
+         */
+        System.out.println(n + " " + count);
 
+        int x = 7;
+        while (x > 0) {
+            if (x % 2 == 0) {
+                /* MY GUESS
+                First iteration will be 7 is odd and we substract by 3 as indicated , second iteration will print 4 is even and substract 3 again will be print 1 is odd and the loop stops.
+
+                 */
+                System.out.println(x + " is even");
+            } else {
+                System.out.println(x + " is odd");
+            }
+            x -= 3;
+
+            int sum = 0;
+            int i = 1;
+            while (i <= 10) {
+                sum += 1;
+                i++;
+
+            }
+            System.out.println("Sum: " + sum);
+
+            Scanner scanner = new Scanner(System.in);
+            int pick = 0;
+            while (pick < 1 || pick > 10) {
+                System.out.print("Pick a number from 1 to 10");
+                pick = scanner.nextInt();
+            }
+            System.out.println("Thanks! You picked " + pick + ".");
+
+            Random random = new Random();
+            int roll = 0;
+            int rolls = 0;
+            while (roll != 6) {
+                roll = random.nextInt(6) + 1;
+                System.out.println("Rolled a " + roll);
+                rolls++;
+            }
+            System.out.println("It took " + rolls + " rolls to get a 6.");
+
+
+        }
+    }
 }
