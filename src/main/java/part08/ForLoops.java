@@ -14,5 +14,15 @@ package part08;
 //    saying in YOUR OWN WORDS what that line does. The README shows an example.
 
 public class ForLoops {
-
+    public static void main(String[] args) {
+        // Start a loop at 10 and continue while i is 0 or greater.
+        for (int i = 10; i >= 0; ) {
+            // Print the current value of i.
+            System.out.println(i);
+            // Subtract 2 from i after each loop.
+            i -= 2;
+        }
+        // Print a message after the countdown finishes.
+        System.out.println("Happy New Year!");
+    }
 }
